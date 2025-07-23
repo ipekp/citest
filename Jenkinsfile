@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    source venv/bin/activate
+                    . venv/bin/activate
                     python3 config.py
                     '''
                 }
@@ -26,7 +26,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    source venv/bin/activate
+                    . venv/bin/activate
                     python3 test.py
                     '''
                 }
