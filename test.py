@@ -27,7 +27,7 @@ payload = '''
 '''
 
 # Connect to the device
-with manager.connect(host='10.3.12.1',
+with manager.connect(host='10.3.11.1',
                      port=830,
                      username='admin',
                      password='admin',
