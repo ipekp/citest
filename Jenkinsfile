@@ -7,7 +7,7 @@ pipeline {
                     sh "python3 -m venv venv"
                     sh '''
                     . venv/bin/activate
-                    pip3 install -r requirements.txt
+                    pip3 install -r 01-netconf/requirements.txt
                     '''
                 }
             }
@@ -17,7 +17,7 @@ pipeline {
                 script {
                     sh '''
                     . venv/bin/activate
-                    python3 config.py
+                    python3 01-netconf/config.py
                     '''
                 }
             }
@@ -27,7 +27,7 @@ pipeline {
                 script {
                     sh '''
                     . venv/bin/activate
-                    python3 test.py
+                    python3 01-netconf/test.py
                     '''
                 }
             }
