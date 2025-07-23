@@ -12,5 +12,26 @@ pipeline {
                 }
             }
         }
+        stage('Configure') {
+            steps {
+                script {
+                    sh '''
+                    source venv/bin/activate
+                    python3 config.py
+                    '''
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                script {
+                    sh '''
+                    source venv/bin/activate
+                    python3 test.py
+                    '''
+                }
+            }
+        }
+
     }
 }
